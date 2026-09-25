@@ -1,0 +1,8 @@
+body
+{background-color: RGB(213,235,234);} 
+
+.container{
+  display:flex;
+  justify-content: center;
+  
+}
