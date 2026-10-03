@@ -1,0 +1,60 @@
+INSERT INTO Users (employee_id, name, position, manager) VALUES
+(1, 'James Carter', 'manager', NULL),
+(2, 'Maria Rodriguez', 'manager', NULL),
+(3, 'David Thompson', 'manager', NULL),
+(4, 'Sarah Mitchell', 'manager', NULL),
+
+(5, 'Michael Brown', 'mechanic', 'James Carter'),
+(6, 'Daniel Wilson', 'mechanic', 'James Carter'),
+(7, 'Robert Davis', 'mechanic', 'James Carter'),
+(8, 'Christopher Miller', 'mechanic', 'James Carter'),
+(9, 'Anthony Anderson', 'mechanic', 'James Carter'),
+(10, 'Kevin Taylor', 'mechanic', 'James Carter'),
+
+(11, 'Jessica Moore', 'mechanic', 'Maria Rodriguez'),
+(12, 'Brian Jackson', 'mechanic', 'Maria Rodriguez'),
+(13, 'Matthew White', 'mechanic', 'Maria Rodriguez'),
+(14, 'Joshua Harris', 'mechanic', 'Maria Rodriguez'),
+(15, 'Andrew Martin', 'mechanic', 'Maria Rodriguez'),
+(16, 'Ryan Thompson', 'mechanic', 'Maria Rodriguez'),
+
+(17, 'William Garcia', 'electrician', 'David Thompson'),
+(18, 'Joseph Martinez', 'electrician', 'David Thompson'),
+(19, 'Thomas Robinson', 'electrician', 'David Thompson'),
+(20, 'Charles Clark', 'electrician', 'David Thompson'),
+(21, 'Steven Lewis', 'electrician', 'David Thompson'),
+(22, 'Jason Lee', 'electrician', 'David Thompson'),
+
+(23, 'Elizabeth Walker', 'diagnostics', 'Sarah Mitchell'),
+(24, 'Jennifer Hall', 'diagnostics', 'Sarah Mitchell'),
+(25, 'Linda Allen', 'diagnostics', 'Sarah Mitchell'),
+(26, 'Patricia Young', 'diagnostics', 'Sarah Mitchell'),
+(27, 'Barbara Hernandez', 'diagnostics', 'Sarah Mitchell'),
+(28, 'Susan King', 'diagnostics', 'Sarah Mitchell'),
+
+(29, 'Mark Wright', 'admin', 'James Carter'),
+(30, 'Paul Lopez', 'admin', 'James Carter'),
+(31, 'George Hill', 'admin', 'Maria Rodriguez'),
+(32, 'Steven Scott', 'admin', 'Maria Rodriguez'),
+(33, 'Donald Green', 'admin', 'David Thompson'),
+(34, 'Kenneth Adams', 'admin', 'David Thompson'),
+
+(35, 'Eric Baker', 'mechanic', 'James Carter'),
+(36, 'Brian Nelson', 'mechanic', 'Maria Rodriguez'),
+(37, 'Edward Carter', 'mechanic', 'James Carter'),
+(38, 'Ronald Mitchell', 'mechanic', 'Maria Rodriguez'),
+
+(39, 'Michelle Perez', 'electrician', 'David Thompson'),
+(40, 'Kimberly Roberts', 'electrician', 'David Thompson'),
+(41, 'Ashley Turner', 'electrician', 'David Thompson'),
+
+(42, 'Amanda Phillips', 'diagnostics', 'Sarah Mitchell'),
+(43, 'Stephanie Campbell', 'diagnostics', 'Sarah Mitchell'),
+(44, 'Rebecca Parker', 'diagnostics', 'Sarah Mitchell'),
+
+(45, 'Daniel Evans', 'admin', 'James Carter'),
+(46, 'Nicole Edwards', 'admin', 'Maria Rodriguez'),
+(47, 'Rachel Collins', 'admin', 'David Thompson'),
+(48, 'Jason Stewart', 'mechanic', 'James Carter'),
+(49, 'Brandon Sanchez', 'mechanic', 'Maria Rodriguez'),
+(50, 'Tyler Morris', 'diagnostics', 'Sarah Mitchell');
