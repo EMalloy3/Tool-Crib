@@ -3,86 +3,135 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Item Record</title>
-  <link rel="index stylesheet" href="ItemRecord.css">
+  <title>Item Record - Tool Crib</title>
+  <link rel="stylesheet" href="ItemRecord.css">
+  <script src="ItemRecord.js" defer></script>
 </head>
 <body>
 
-  <h1>Item Record</h1>
+<header>
+  <h1 class="company">Tool Crib</h1>
+  <h1 class="title">Item Record</h1>
 
-  <form>
+  <nav class="navbar">
+    <ul>
+      <li><a href="MainMenu.html">Main Menu</a></li>
+      <li><a href="ReturnItems.html">Return Items</a></li>
+      <li><a href="CreateRecord.html">Create Record</a></li>
+      <li><a href="Search.html">Search</a></li>
+    </ul>
+  </nav>
+</header>
 
-    <div>
-      <label for="Item ID">Item ID</label>
-      <input type="text" id="Item ID" name ="Item ID">
+<main>
+  <section>
+    <h2>Find a Tool</h2>
+
+    <form id="searchForm">
+      <label for="searchInput">Tool ID or description</label>
+      <input
+        type="search"
+        id="searchInput"
+        placeholder="Enter ID, description, serial number..."
+        required
+      >
+      <button type="submit">Search</button>
+    </form>
+
+    <p id="message" role="status" aria-live="polite"></p>
+    <div id="searchResults"></div>
+  </section>
+
+  <hr>
+
+  <section>
+    <h2>Tool Information</h2>
+
+    <form id="toolForm">
+      <div class="sectionOne">
+        <label for="toolId">Tool ID</label>
+        <input id="toolId" readonly>
+
+        <label for="description">Description</label>
+        <input id="description" readonly>
+      </div>
+
+      <div class="sectionTwo">
+        <label for="serialNumber">Serial Number</label>
+        <input id="serialNumber" readonly>
+
+        <label for="modelNumber">Model Number</label>
+        <input id="modelNumber" readonly>
+      </div>
+
+      <div class="sectionThree">
+        <label for="manufacturer">Manufacturer</label>
+        <input id="manufacturer" readonly>
+
+        <label for="type">Item Type</label>
+        <input id="type" readonly>
+      </div>
+
+      <div class="sectionFour">
+        <label for="calibrationDate">Calibration Completed</label>
+        <input id="calibrationDate" readonly>
+
+        <label for="calibrationDue">Calibration Due</label>
+        <input id="calibrationDue" readonly>
+      </div>
+
+      <div class="sectionFive">
+        <label for="location">Location</label>
+        <input id="location" readonly>
+      </div>
+
+      <button type="button" id="editButton" disabled>
+        Edit Location
+      </button>
+
+      <button type="submit" id="saveButton" hidden>
+        Save Changes
+      </button>
+
+      <button type="button" id="cancelButton" hidden>
+        Cancel
+      </button>
+    </form>
+  </section>
+
+  <hr>
+
+  <section>
+    <h2>Item History</h2>
+
+    <div class="table-container">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>History ID</th>
+            <th>Tool ID</th>
+            <th>Employee ID</th>
+            <th>Employee Name</th>
+            <th>Event</th>
+            <th>Event Date</th>
+            <th>Checked Out</th>
+            <th>Returned</th>
+          </tr>
+        </thead>
+        <tbody id="historyBody">
+          <tr>
+            <td colspan="8">Search for a tool to view its history.</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
+  </section>
+</main>
 
-      <br>
-
-    <div>
-      <label  for="Item Description">Item Description</label>
-      <input  type="text" id="Item Description" name ="Item Description">
-    </div>
-
-    <br>
-
-    <div>
-      <label for="Serial Number">Serial Number</label>
-      <input type="text" id="Serial Number" name ="Serial Number">
-    </div>
-    
-    <br>
-
-    <div>
-      <label for="Model Number">Model Number</label>
-      <input type="text" id="Model Number" name ="Model Number">
-    </div>
-
-    <br>
-
-    <div>
-      <label for="Manufacturer">Manufacturer</label>
-      <input type="text" id="Manufacturer" name ="Manufacturer">
-    </div>
-
-    <br>
-
-    <div>
-      <label for="Item Type">Item Type</label>
-      <input type="text" id="Item Type" name ="Item Type">
-    </div>
-
-    <br>
-
-    <div>
-      <label for="Calibration Completed">Calibration Completed</label>
-      <input type="text" id="Calibration Completed" name ="Calibration Completed">
-    </div>
-
-    <br>
-
-    <div>
-      <label for="Calibration Due">Calibration Due</label>
-      <input type="text" id="Calibration Due" name ="Calibration Due">
-    </div>
-
-    <br>
-
-    <div>
-      <label for="Location">Location</label>
-      <input type="text" id="Location" name ="Location">
-    </div>
-
-    <br>
-
-    <div>
-      <label for="Item History">Item History</label>
-      <input type="text" id="Item History" name ="Item History">
-    </div>
-
-
-  </form>
-
+<footer>
+  <hr>
+  &copy; Copyright reserved
+</footer>
 
 </body>
 </html>
