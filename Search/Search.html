@@ -4,46 +4,81 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Search</title>
+
+  <!-- Links the external CSS stylesheet for page styling -->
   <link rel="Search stylesheet" href="Search.css">
 </head>
-<body>
 
-  <h1 class="container" style="font-size:50px;">Search</h1>
+  <body>
+    
+    <!-- Header section containing the company name, page title, and navigation -->
+    <header>
+      <h1 class="company">Tool Crib</h1> <h1 class="container" style="font-size:30px;">Search</h1>
+      
+      <!-- Navigation bar linking to other pages in the system -->
+      <nav class="navbar">
+        <ul>
+          <li><a href="MainMenu.html">Main Menu</a></li>
+          <li><a href="EmployeeRecord.html">Employee Record</a></li>
+        </ul>
+      </nav>
+      <br>
+    </header>
+  
+  <!-- Main section containing the search controls and results table -->
+    <main>
 
-<div class="container">
-      <label for="Search">Search</label>
-      <input style="font-size:15px; border-radius:25px;" type="text" id="Search" name ="Search">
+      <div class="container">
+        <label for="Search">Search</label>
+        <input style="font-size:15px; border-radius:25px;" type="text" id="Search" name ="Search">
+        <button type=button id=searchButton style="font-size:15px; border-radius:10px;">Search</button>
+      </div>
+
+      <!-- Displays search messages, such as instructions or status updates -->
+      <p id="searchMessage" style="text-align:center;"></p>
+
+      <br><br>
+
+      <!-- Table displaying the tools that match the search --> 
+      <div class="table-wrapper">
+  <table id="searchTable">
+    <thead>
+      <tr>
+        <th>Item ID</th>
+        <th>Description</th>
+        <th>Model Number</th>
+        <th>Serial Number</th>
+        <th>Manufacturer</th>
+        <th>Type</th>
+        <th>Location</th>
+        <th>Calibration Date</th>
+        <th>Calibration Due</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+
+    <tbody id="searchResults">
+      <tr>
+        <td colspan="10">Search for a tool to display results.</td>
+      </tr>
+    </tbody>
+  </table>
 </div>
 
-      <br>
-      <br>
+  </main>
 
-      <table class="container" >
+      <br><br><br><br><br><br><br><br><br><br><br><br>
+      <br><br><br><br><br><br><br><br><br><br><br><br>
 
-        <tr bgcolor="grey">
-            <th width="150" style="border:1px solid black";>Item ID</th>
-            <th width="150" style="border:1px solid black";>Description</th>
-            <th width="150" style="border:1px solid black";>Model Number</th>
-            <th width="150" style="border:1px solid black";>Serial Number</th>
-            <th width="150" style="border:1px solid black";>Manufacturer</th>
-            <th width="150" style="border:1px solid black";>Type</th>
-            <th width="150" style="border:1px solid black";>Location</th>
-            <th width="150" style="border:1px solid black";>Calibration Date</th>
-            <th width="150" style="border:1px solid black";>Calibration Due</th>
-        </tr>
-        <tr bgcolor="lightgrey" align="center">
-          <td width="150" style="border:1px solid black";></td>
-          <td width="150" style="border:1px solid black";></td>
-          <td width="150" style="border:1px solid black";></td>
-          <td width="150" style="border:1px solid black";></td>
-          <td width="150" style="border:1px solid black";></td>
-          <td width="150" style="border:1px solid black";></td>
-          <td width="150" style="border:1px solid black";></td>
-          <td width="150" style="border:1px solid black";></td>
-          <td width="150" style="border:1px solid black";></td>
-        </tr>
+  <!-- Footer section displayed at the bottom of the webpage and copyright notice -->
+  <footer>
+    <hr>
+    &copy; copyright reserved
+    <br>
+  </footer>
 
-      </table>
+  <script src="Search.js"></script>
   
 </body>
+
 </html>
