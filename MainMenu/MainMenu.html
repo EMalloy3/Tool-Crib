@@ -4,52 +4,64 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Main Menu</title>
+
+  <!-- Links the CSS stylesheet to style the main menu -->
   <link rel="index stylesheet" href="MainMenu.css">
 
 </head>
-<body>
 
-  <h1 class="container" style="font-size:50px;">Main Menu</h1>
-  <br>
-  <br>
+  <body>
+  
+    <!-- Displays the company name and main menu heading -->
+    <h1 class="company">Tool Crib</h1> <h1 class="container" style="font-size:50px;">Main Menu</h1>
+    <hr>
+    <br><br>
     
-  <div class="container">
-  <a href="Search.html" target=_self title="Search">
-  <button style="font-size:30px; border-radius:25px;">Search</button>
-  </a>
-  </div>
-  <br>
-  <br>
+    <!-- Container that holds all main menu buttons -->
+    <div class="login-box">
+    <div class="container">
+      <a href="Search.html" target=_self title="Search">
+      <button style="font-size:25px; border-radius:25px;">Search</button>
+      </a>
+    </div>
+    <br><br>
 
-  <div class="container">
-  <a href="EmployeeRecord.html" target=_self title="Employee Record">
-  <button style="font-size:30px; border-radius:25px;">Employee Record</button>
-  </a>
-  </div>
-  <br>
-  <br>
+    <div class="container">
+      <a href="EmployeeRecord.html" target=_self title="Employee Record">
+      <button style="font-size:25px; border-radius:25px;">Employee Record</button>
+      </a>
+    </div>
+    <br><br>
 
-  <div class="container">
-  <a href="">
-  <button style="font-size:30px; border-radius:25px;">Return Items</button>
-  </a>
-  </div>
-  <br>
-  <br>
+    <div class="container">
+  <a href="ReturnItems.html" id="returnItems">
+    <button style="font-size:25px; border-radius:25px;" type="button">Return Items</button>
+</a>
+</div>
+    <br><br>
 
-  <div class="container">
-  <a href="CreateRecord.html" target=_self title="Create Record">
-  <button style="font-size:30px; border-radius:25px;">Create Record</button>
-  </a>
-  </div>
-  <br>
-  <br>
+    <div class="container">
+  <a href="CreateRecord.html" id="createRecord">
+    <button style="font-size:25px; border-radius:25px;" type="button">Create Record</button>
+</a>
+</div>
+    <br><br>
+  
+    </div>
 
-  <div class="container">
-  <a href="Reports.html" target=_self title="Reports">
-  <button style="font-size:30px; border-radius:25px;">Reports</button>
-  </a>
-  </div>
+    <br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br><br>
 
-</body>
+    <!-- Footer section displayed at the bottom of the page and contains copyright notice-->
+    <footer>
+      <hr>
+      &copy; copyright reserved
+      <br>
+    </footer>
+
+    <!-- Links the JavaScript file for main menu functionality -->
+    <script src="MainMenu.js"></script>
+
+  </body>
+
 </html>
