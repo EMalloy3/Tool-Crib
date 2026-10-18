@@ -1,2 +1,88 @@
-body
-{background-color: RGB(213,235,234);} 
+/* Sets the background color for the entire webpage */
+body {
+  background-color: RGB(213, 235, 234);
+}
+
+/* Styles the sections containing the tool information and search bar */
+.sectionOne,
+.sectionTwo,
+.sectionThree,
+.sectionFour,
+.sectionFive,
+.search {
+  display: flex;
+  gap: 20px;
+  font-size: 15px;
+  border-radius: 20px;
+  justify-content: center;
+}
+
+/* Centers the page title and sets its font size */
+.title {
+  display: flex;
+  font-size: 30px;
+  justify-content: center;
+}
+
+/* Centers the tool history table */
+/* Styles the tool history table */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px auto;
+}
+
+/* Styles the table header cells and data cells */
+.table th,
+.table td {
+  border: 1px solid black;
+  padding: 8px;
+  text-align: center;
+}
+
+/* Adds a background color to the table headers */
+.table th {
+  background-color: lightcyan;
+}
+
+/* Adds a background color to the table body */
+.table tbody {
+  background-color: ghostwhite;
+}
+
+/* Styles the unordered list inside the navigation bar */
+.navbar ul {
+  list-style-type: none;
+  background-color: cadetblue;
+  padding: 0px;
+  margin: 0px;
+  overflow: hidden;
+}
+
+/* Styles the navigation links */
+.navbar a {
+  color: white;
+  text-decoration: none;
+  padding: 15px;
+  display: block;
+  text-align: center;
+}
+
+/* Positions navigation list items horizontally */
+.navbar li {
+  float: left;
+}
+
+/* Centers the Find a Tool section heading */
+section h2 {
+  text-align: center;
+}
+
+/* Centers the search form */
+#searchForm {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin: 20px auto;
+}
