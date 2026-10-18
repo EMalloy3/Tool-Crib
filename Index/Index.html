@@ -1,31 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tool Crib</title>
-  <link rel="index stylesheet" href="index.css">
+
+  <!-- Links the external CSS file for webpage styling -->
+  <link rel="stylesheet" href="index.css">
 </head>
+
 <body>
+
+  <!-- Displays the main heading of the webpage -->
+  <h1 class="container" style="font-size:50px;">Tool Crib</h1>
+
+  <!-- Main section containing the logo and login form -->
+  <main>
+
+    <!-- Container for the Tool Crib logo -->
+    <div class="container">
+      <img src="Images/Logo.png" height="500" width="1000" style="border-radius:25px;">
+    </div>
+
+    <br>
+
+    <!-- Login box containing the employee login form -->
+    <div class="login-box">
+
+      <!-- Form used to collect the employee's login credentials -->
+      <form id="loginForm">
+
+        <!-- Input field for the employee ID -->
+        <div class="input-container">
+          <input id="employeeId" type="text" name="employeeId" required>
+          <label for="employeeId">Employee ID:</label>
+        </div>
+
+        <!-- Input field for the employee's password -->
+        <div class="input-container">
+          <input id="password" type="password"c name="password" required>
+          <label for="password">Password:</label>
+        </div>
+
+        <!-- Login button used to submit the form -->
+        <div class="container">
+          <button id="loginButton" style="font-size:15px; border-radius:10px;">Login</button>
+        </div>
+
+        <!-- Displays login status messages -->
+        <p id="loginMessage" role="status" aria-live="polite"></p>
+
+        <!-- Link that takes users to the account creation page -->
+        <div class="container">
+          <a href="CreateAccount.html" target="_self" title="Create Account">Create Account</a>
+        </div>
+
+        <!-- Link that takes users to the password reset page -->
+        <div class="container">
+          <a href="ForgotPassword.html" target="_self" title="Reset Password">Forgot Password?</a>
+        </div>
+
+      </form>
+
+    </div>
+
+  </main>
   
- <h1>Tool Crib</h1>
- 
- <form>
+  <br><br><br><br><br><br><br><br><br><br><br><br>
 
- <div>
-  <label for="User Name">User Name:</label>
-  <input type="text" id="User Name" name="User Name">
- </div>
+  <!-- Footer section containing copyright information -->
+  <footer>
+    <hr>
+    &copy; copyright reserved
+    <br>
+  </footer>
 
- <br>
-
- <div>
-  <label for="Password">Password:</label>
-  <input type="password" id="Password" name="Password">
-
- </div>
-
-</form>
+  <!-- Links the external JavaScript file for login functionality -->
+  <script src="index.js"></script>
 
 </body>
 </html>
