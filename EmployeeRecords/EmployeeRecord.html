@@ -4,43 +4,120 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Employee Record</title>
-  <link rel="index stylesheet" href="EmployeeRecord.css">
+
+  <!-- Links the external CSS file for styling the webpage -->
+  <link rel="stylesheet" href="EmployeeRecord.css">
 </head>
+
 <body>
 
-  <h1>Employee Record</h1>
-  
-  <form>
+  <!-- Header section containing the company name, page title, and navigation menu -->
+  <header>
+    <h1 class="company">Tool Crib</h1> <h1 class="title">Employee Record</h1>
 
-    <div>
-      <label for="Photo">Photo</label>
-      <input type="text" id="Photo" name ="Photo">
+    <!-- Navigation bar for moving between different pages -->
+    <nav class="navbar">
+        <ul>
+          <li><a href="MainMenu.html">Main Menu</a></li>
+          <li><a href="Search.html">Search</a></li>
+        </ul>
+    </nav>
+  </header>
+  <br>
+
+  <!-- Main section containing employee search and record information -->
+  <main>
+    <p class="search">Enter Employee ID</p>
+    <div class="search">
+      <label for="Search">Search</label>
+      <input style="font-size:15px; border-radius:25px;" type="text" id="Search" name ="Search">
+      <button type="button" id="searchButton" style="font-size:15px; border-radius:10px;">Search</button>
     </div>
 
-      <br>
-
-    <div>
-      <label for="Name">Name</label>
-      <input type="text" id="Name" name ="Name">
-    </div>
-
-      <br>
-
-    <div>
-      <label for="Position">Position</label>
-      <input type="text" id="Position" name ="Position">
-    </div>
-
-      <br>
+    <!-- Form containing the employee's personal and job information -->
+    <form>
 
       <div>
-      <label for="Manager">Manager</label>
-      <input type="text" id="Manager" name ="Manager">
-    </div>
+        <img src="Images/Employee.png" height="250" width="250" style="border-radius:25px;"> 
+      </div>
+      <br>
+        
+      <div class="container">
+        <label for="Name">Name</label>
+        <input type="text" id="Name" name ="Name">
+      </div>
 
       <br>
 
-  </form>
+      <div class="container">
+        <label for="Employee_ID">Employee ID</label>
+        <input type="text" id="Employee_ID" name ="Employee_ID">
+      </div>
+
+      <br>
+
+      <div class="container">
+        <label for="Position">Position</label>
+        <input type="text" id="Position" name ="Position">
+      </div>
+
+      <br>
+
+      <div class="container">
+        <label for="Manager">Manager</label>
+        <input type="text" id="Manager" name ="Manager">
+      </div>
+
+    </form>
+
+
+    <br><br>
+  
+    <!-- Section displaying the tools and equipment checked out by the employee -->
+    <div>
+      <label for="Checked Out" class="title">Checked Out</label>  
+      <p id="statusMessage" role="status" aria-live="polite"></p>
+
+    <!-- Table displaying items currently checked out by the employee -->
+      <table id="employeeTable" class="table">
+  <thead>
+    
+    <tr bgcolor="lightcyan">
+      <th>Item ID</th>
+      <th>Description</th>
+      <th>Model Number</th>
+      <th>Serial Number</th>
+      <th>Manufacturer</th>
+      <th>Type</th>
+      <th>Location</th>
+      <th>Calibration Date</th>
+      <th>Calibration Due</th>
+    </tr>
+  </thead>
+
+  <tbody id="employeeRecord">
+    <tr>
+      <td colspan="9"></td>
+    </tr>
+  </tbody>
+</table>
+      </div>
+  
+    
+  </main>
+  
+  <br><br><br><br><br><br><br><br><br><br><br><br>
+  <br><br><br><br><br><br><br><br><br><br><br><br>
+
+  <!-- Footer section and copyright notice -->
+  <footer>
+    <hr>
+    &copy; copyright reserved
+    <br>
+  </footer>
+
+  <!-- Links the JavaScript file that handles employee search and record functionality -->
+  <script src="EmployeeRecord.js"></script>
 
 </body>
 </html>
