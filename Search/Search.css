@@ -1,8 +1,65 @@
+/* Sets the background color for the entire webpage */
 body
 {background-color: RGB(213,235,234);} 
 
+/* Uses Flexbox to center the contents horizontally */
 .container{
   display:flex;
   justify-content: center;
-  
+}
+
+/* Styles the unordered list inside the navigation bar */
+.navbar ul{
+  list-style-type: none;
+  background-color: cadetblue;
+  padding: 0px;
+  margin: 0px;
+  overflow: hidden;
+}
+
+/* Styles the navigation links */
+.navbar a{
+  color: white;
+  text-decoration: none;
+  padding: 15px;
+  display: block;
+  text-align: center;
+}
+
+/* Positions navigation list items horizontally */
+.navbar li{
+  float: left;
+}
+
+/* Styles the wrapper around the search results table */
+.table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  margin: 20px auto;
+}
+
+/* Styles the search results table */
+#searchTable {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: auto;
+}
+
+/* Styles the table header cells and data cells */
+#searchTable th,
+#searchTable td {
+  border: 1px solid black;
+  padding: 8px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+/* Styles the header row of the search results table */
+#searchTable th {
+  background-color: lightcyan;
+}
+
+/* Styles the body section containing the search results */
+#searchTable tbody{
+  background-color: ghostwhite;
 }
