@@ -1,2 +1,40 @@
+/* Sets the background color for the entire webpage */
 body
 {background-color: RGB(213,235,234);} 
+
+/*Styles the container holding each input field and label*/
+.input-container {
+    width: 300px;
+    margin: 20px auto;
+}
+
+/*Styles input fields*/
+.input-container input {
+    display: block;
+    width: 100%;
+    border-radius: 20px;
+}
+
+/*Styles inout labels*/
+.input-container label {
+    display: block;
+    text-align: left;
+}
+
+/*Centers container content*/
+.container{
+    display: flex;
+    justify-content: center;
+}
+
+/*Styles the login box*/
+.login-box{
+    display: flex;
+    justify-content: center;
+    background-color: aliceblue;
+    width: 400px;
+    height: 450px;
+    border-radius: 25px;
+    align-items: center;
+    margin: 0 auto;
+}
