@@ -1,22 +1,41 @@
 /* Sets the background color for the entire webpage */
 body
-{background-color: RGB(213,235,234);} 
+{background-color: RGB(213,235,234);
+} 
 
-/*Centers container content*/
+/* Styles container elements, such as form fields and buttons */
 .container{
   display:flex;
+  font-size:20px;
+  border-radius:30px;
   justify-content: center;
-  }
+  
+}
 
-  /* Styles the create menu container and centers its contents */
-  .create-menu{
-    display: flex;
-    justify-content: center;
-    background-color: aliceblue;
-    width: 400px;
-    height: 450px;
-    border-radius: 25px;
-    align-items: center;
-    margin: 0 auto;
-    flex-direction: column;
+/* Centers the status message displayed after form submission */
+#createMessage {
+    text-align: center;
+}
+
+/* Styles the unordered list inside the navigation bar */
+.navbar ul{
+  list-style-type: none;
+  background-color: cadetblue;
+  padding: 0px;
+  margin: 0px;
+  overflow: hidden;
+}
+
+/* Styles the navigation links */
+.navbar a{
+  color: white;
+  text-decoration: none;
+  padding: 15px;
+  display: block;
+  text-align: center;
+}
+
+/* Positions navigation list items horizontally */
+.navbar li{
+  float: left;
 }
