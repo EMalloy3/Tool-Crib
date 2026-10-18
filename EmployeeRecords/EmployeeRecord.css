@@ -1,2 +1,104 @@
-body
-{background-color: RGB(213,235,234);} 
+/* Sets the background color for the entire webpage */
+body {
+  background-color: rgb(213, 235, 234);
+}
+
+/*Centers and styles container content*/
+.container {
+  display: flex;
+  font-size: 20px;
+  border-radius: 25px;
+}
+
+/* Styles and centers page titles */
+.title {
+  display: flex;
+  font-size: 30px;
+  justify-content: center;
+}
+
+/* Styles and centers the employee search section */
+.search {
+  display: flex;
+  font-size: 15px;
+  justify-content: center;
+}
+
+/* Styles the unordered list inside the navigation bar */
+.navbar ul {
+  list-style-type: none;
+  background-color: cadetblue;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+}
+
+/* Styles the navigation links */
+.navbar a {
+  color: white;
+  text-decoration: none;
+  padding: 15px;
+  display: block;
+  text-align: center;
+}
+
+/* Positions navigation list items horizontally */
+.navbar li {
+  float: left;
+}
+
+/* Table container */
+.table-container {
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+}
+
+/* Employee tools table */
+#employeeTable {
+  display: table;
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+/* Defines the layout of the table header section */
+#employeeTable thead {
+  display: table-header-group;
+}
+
+/* Defines the layout of the table body section */
+#employeeTable tbody {
+  display: table-row-group;
+}
+
+/* Defines the layout of each table row */
+#employeeTable tr {
+  display: table-row;
+}
+
+
+/* Styles all header and data cells in the employee table */
+#employeeTable th,
+#employeeTable td {
+  display: table-cell;
+  border: 1px solid black;
+  padding: 8px;
+  text-align: left;
+  overflow-wrap: anywhere;
+}
+
+/* Center the no-tools message across all nine columns */
+#employeeTable #employeeRecord td[colspan="9"] {
+  text-align: center;
+  padding: 20px;
+  font-weight: bold;
+}
+
+/* Search status message */
+#statusMessage {
+  display: block;
+  width: 100%;
+  text-align: center;
+  margin: 12px 0;
+}
