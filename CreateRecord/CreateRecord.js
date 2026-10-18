@@ -1,60 +1,61 @@
 //This file was created with the aid of AI(ChatGPT)
 
-//Gets the creation form from HTML file, displays messages, gets the container for the Create button
-const form = document.getElementById('createAccountForm');
-const message = document.getElementById('message');
+//Gets the form, Create button, and message element from the HTML
+const createRecordForm = document.getElementById('createRecordForm');
 const createButton = document.getElementById('createButton');
+const createMessage = document.getElementById('createMessage');
 
-//Listens for form submission and prevents browser from refreshing
-form.addEventListener('submit', async (event) => {
+//Runs this function when the user submits the form
+createRecordForm.addEventListener('submit', async (event) => {
   event.preventDefault();
 
-  //prevents page refreshing
-  message.textContent = '';
   createButton.disabled = true;
+  createMessage.textContent = 'Creating tool record...';
 
-  const formData = new FormData(form);
+  //Collects the form values and stores them in a tool object
+  const tool = {
+    Tool_ID: document.getElementById('Tool_ID').value.trim(),
+    Description: document.getElementById('Description').value.trim(),
+    Model_Number: document.getElementById('Model_Number').value.trim(),
+    Serial_Number: document.getElementById('Serial_Number').value.trim(),
+    Manufacturer: document.getElementById('Manufacturer').value.trim(),
+    Type: document.getElementById('Type').value.trim(),
+    Location: document.getElementById('Location').value.trim(),
+    Calibration_Date:
+      document.getElementById('Calibration_Date').value || null,
+    Calibration_Due:
+      document.getElementById('Calibration_Due').value || null
+  };
 
-  //creates employee object using values collect from the form
-  const employee = {
-  employeeId: formData.get('employeeId').trim(),
-  name: formData.get('name').trim(),
-  email: formData.get('email').trim(),
-  password: formData.get('password'),
-  position: formData.get('position').trim(),
-  manager: formData.get('manager').trim()
-};
-
-  //Logs employee object to console for debugging
+  //Sends the tool information to the server using a POST request
   try {
-    console.log('Sending employee:', employee);
-
-      //Sends POST request to server API to create new record
-      const response = await fetch('/api/employees', {
+    const response = await fetch('/postData', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify(employee)
+      body: JSON.stringify(tool)
     });
 
-    //Reads server response
     const data = await response.json();
 
-    //Checks if server responded with success
+    //Checks whether the server returned an unsuccessful HTTP status
     if (!response.ok) {
-      throw new Error(
-        data.message || `Request failed: ${response.status}`
-      );
+      createMessage.textContent =
+        data.message || 'Failed to create tool record.';
+      return;
     }
 
-    message.textContent = data.message;
-    form.reset();
+    createMessage.textContent = data.message;
 
-  //Logs error message to console and re-enables Create button
+    createRecordForm.reset();
+
+  //Logs errors and re0enables button
   } catch (error) {
-    console.error('Create account failed:', error);
-    message.textContent = error.message;
+    console.error('Create record error:', error);
+
+    createMessage.textContent =
+      'Unable to connect to the server. Please try again.';
   } finally {
     createButton.disabled = false;
   }
