@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Return</title>
+
+  <!-- Links the external CSS stylesheet to style the Return page -->
+  <link rel="Return Items stylesheet" href="ReturnItems.css">
+</head>
+
+  <body>
+
+    <!-- Header section containing the company name, page title, and navigation -->
+    <header>
+      <h1 class="company">Tool Crib</h1> <h1 class="container" style="font-size:30px;">Return</h1>
+
+      <!-- Navigation bar for moving between different pages -->
+      <nav class="navbar">
+        <ul>
+          <li><a href="MainMenu.html">Main Menu</a></li>
+          <li><a href="EmployeeRecord.html">Employee Record</a></li>
+          <li><a href="Search.html">Search</a></li>
+        </ul>
+      </nav>
+    </header>
+  
+  <!-- Main section containing the tool return functionality -->
+    <main>
+  <div class="rules">
+    <p>
+      Search by employee name, employee ID, or tool ID.
+      Select the tools you want to check back in.
+    </p>
+  </div>
+
+  <!-- Form used to search for employees or tools -->
+  <form id="returnSearchForm">
+    <div class="container">
+      <label for="searchTerm">Employee or Tool ID</label>
+      <input
+        type="text"
+        id="searchTerm"
+        name="searchTerm"
+        placeholder="Enter a name, employee ID, or tool ID"
+        required
+      >
+      <!-- Submits the search form -->
+      <button type="submit">Search</button>
+    </div>
+  </form>
+
+  <p id="statusMessage" role="status" aria-live="polite"></p>
+
+  <div class="container">
+    <label for="selectAll">Select All</label>
+    <input type="checkbox" id="selectAll">
+    <button type="button" id="checkinButton" disabled>
+      Check In Selected
+    </button>
+  </div>
+
+  <div class="table-wrapper">
+
+  <!-- Table displaying information about checked-out tools -->
+    <table class="return-table">
+    <thead>
+      <tr>
+        <th>Select</th>
+        <th>Item ID</th>
+        <th>Description</th>
+        <th>Model Number</th>
+        <th>Serial Number</th>
+        <th>Manufacturer</th>
+        <th>Type</th>
+        <th>Original Location</th>
+        <th>Calibration Date</th>
+        <th>Calibration Due</th>
+        <th>Checked Out By</th>
+        <th>Employee ID</th>
+      </tr>
+    </thead>
+    <tbody id="returnTableBody">
+      <tr>
+        <td colspan="12">Search for checked-out tools to begin.</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</main>
+
+    <br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br><br>
+
+  <!-- Footer section displayed at the bottom of the webpage and copyright notice -->
+    <footer>
+    <hr>
+    &copy; copyright reserved
+    <br>
+  </footer>
+
+  <!-- Links the JavaScript file that handles functionality -->
+  <script src="ReturnItems.js"></script>
+  
+</body>
+
+</html>
