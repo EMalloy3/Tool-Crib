@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Links the external CSS stylesheet for page styling -->
+<link rel="Create Account stylesheet" href="CreateAccount.css">
+<title>Create Account</title>
+</head>
+
+      <body>
+
+            <!-- Header section containing the company name and page title -->
+            <header>
+            <h1 class="company">Tool Crib</h1> <h1 class="container" style="font-size:30px">Create Record</h1>
+            </header>
+
+      <Main>
+
+      <!-- Form used to collect information for a new employee record -->
+      <form id="createAccountForm" class="create-menu">   
+
+      <div class="create-menu">  
+      <div class="container">
+            <label for="employeeId">Employee ID</label>
+            <input type="text" id="employeeId" name ="employeeId" required>
+      </div>
+      <br>
+
+      <div class="container">
+            <label for="name">Name</label>
+            <input type="text" id="name" name ="name" required>
+      </div>
+      <br>
+
+      <div class="container">
+            <label for="email">Email Address</label>
+            <input type="text" id="email" name ="email" required>
+      </div>
+      <br>
+
+      <div class="container">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required minlength="8" autocomplete="new-password">
+      </div>
+      <br>
+
+      <div class="container">
+            <label for="position">Position</label>
+            <input type="text" id="position" name ="position" required>
+      </div>
+      <br>
+
+      <div class="container">
+            <label for="manager">Manager</label>
+            <input type="text" id="manager" name ="manager" required>
+      </div>
+      <br>
+
+      <div class="container" id="createButton">
+            <button>Create</button>
+      </div>
+      </div>
+
+      <!-- Displays status message-->
+      <p id="message" role="status" aria-live="polite"></p>
+
+      </form>  
+
+      </Main>
+
+      <br><br><br><br><br><br><br><br><br><br><br><br> 
+      <br><br><br><br><br><br><br><br><br><br><br><br>
+      
+      <!-- Footer section containing the copyright notice -->
+      <footer>
+            <hr>
+            &copy; copyright reserved
+            <br>
+      </footer>
+
+      <!-- Links the JavaScript file that handles functionality -->
+      <script src="CreateAccount.js"></script>
+
+</body>
+</html>
