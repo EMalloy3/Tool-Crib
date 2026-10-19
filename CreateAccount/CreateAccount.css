@@ -1,0 +1,22 @@
+/* Sets the background color for the entire webpage */
+body
+{background-color: RGB(213,235,234);} 
+
+/*Centers container content*/
+.container{
+  display:flex;
+  justify-content: center;
+  }
+
+  /* Styles the create menu container and centers its contents */
+  .create-menu{
+    display: flex;
+    justify-content: center;
+    background-color: aliceblue;
+    width: 400px;
+    height: 450px;
+    border-radius: 25px;
+    align-items: center;
+    margin: 0 auto;
+    flex-direction: column;
+}
